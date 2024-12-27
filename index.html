@@ -3,38 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialmente pra você</title>
+    <title>Fiz pra você</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
+            background-color: #f0f8ff;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #000000;
-            padding: 50px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        header {
+            background-color: #FF8000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
         }
+
         h1 {
-            color: #FFFFFF;
-            font-size: 58px;
+            margin: 0;
         }
-        p {
-            font-size: 36px;
-            line-height: 1.6;
-            color: #FFFFFF;
+
+        .highlight {
+            background-color: #ffeb3b; /* Amarelo para destaque */
+            color: #333;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
         }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh; /* Para centralizar verticalmente */
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .btn {
+            background-color: #FF8000;
+            color: white;
+            font-size: 1.5em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #FE9A2E;
+        }
+
+        .text-box {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+            background-color: #fff;
+            border: 2px solid #FF8000;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .text-footer {
+            font-size: 0.8em;
+            text-align: right;
+            margin-top: 0px; /* Espaço acima do rodapé */
+            color: #333;
+            font-style: italic;
+            padding-top: 10px;
+        }
+
     </style>
 </head>
 <body>
+
+<header>
+    <h1>Mensagem pra Maria Solange!</h1>
+</header>
+
 <div class="container">
-    <h1>Você é Tudo!</h1>
-    <p>
-        Este é o corpo do texto que você pode editar conforme necessário. Adicione o conteúdo que desejar aqui. Pode ser um texto explicativo, uma mensagem importante ou qualquer outro tipo de conteúdo.
-    </p>
+    <button class="btn" onclick="showText()">Clique para Ver</button>
+    <div class="text-box" id="textBox">
+        <p>
+            "Sol, você é mais forte do que pode imaginar. <br><br>
+            Já passou por tanto, e cada desafio a ensinou a nunca desistir, mesmo quando a vida tentou derrubá-la.
+            <br><br>
+            Você pode não perceber, mas sua força é imensa. Não é invencível, é verdade, mas sua capacidade de se
+            reerguer, de aprender com os momentos difíceis <br><br>
+            e seguir em frente, é algo admirável. Você não é perfeita, tem suas falhas e vulnerabilidades, mas são essas
+            imperfeições que te tornam única e real. <br><br>
+            Já caiu, já chorou, mas sempre se levantou, mais forte e mais sábia. Você aprendeu que ser forte não é
+            esconder suas emoções, <br><br>
+            mas saber lidar com elas e continuar caminhando. Você é uma mulher guerreira, e essa luta é sua, faz parte
+            de quem você é. <br><br>
+            Sua força vem de dentro, do seu coração, das suas experiências e do amor que aprendeu a ter por si mesma.
+            <br><br>
+            Você é especial do seu jeito, e não precisa de mais nada além de si mesma para saber o quanto é valiosa.
+            <br><br>
+            Eu admiro sua coragem, sua resiliência e sua beleza, por dentro e por fora."
+        </p>
+        <div class="text-footer">
+            <p>Eu imagino que já sabia de tudo isso, mas fiz questão de deixar claro, a mulher que é!</p>
+        </div>
+    </div>
 </div>
+
+
+<footer class="footer">
+    <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function showText() {
+        var textBox = document.getElementById("textBox");
+        textBox.style.display = "block"; // Exibe o texto ao clicar no botão
+    }
+</script>
+
 </body>
 </html>
