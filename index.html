@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiz pra você</title>
     <style>
+        /* Estilo geral */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -21,6 +22,7 @@
 
         h1 {
             margin: 0;
+            font-size: 2em; /* Tamanho da fonte para responsividade */
         }
 
         .highlight {
@@ -41,6 +43,7 @@
             height: 70vh; /* Para centralizar verticalmente */
             text-align: center;
             flex-direction: column;
+            padding: 10px;
         }
 
         .btn {
@@ -69,8 +72,20 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 100%; /* Ajusta para telas menores */
+            width: 80%;
         }
 
+        .text-footer {
+            font-size: 0.9em;
+            text-align: right;
+            margin-top: 20px;
+            color: #333;
+            font-style: italic;
+            padding-top: 10px;
+        }
+
+        /* Rodapé fixo */
         .footer {
             background-color: #333;
             color: white;
@@ -81,15 +96,47 @@
             width: 100%;
         }
 
-        .text-footer {
-            font-size: 0.8em;
-            text-align: right;
-            margin-top: 0px; /* Espaço acima do rodapé */
-            color: #333;
-            font-style: italic;
-            padding-top: 10px;
+        /* Media queries para telas pequenas */
+        @media (max-width: 768px) {
+            .container {
+                height: auto; /* Remove a altura fixa */
+                padding: 20px;
+            }
+
+            .btn {
+                font-size: 1.2em;
+                padding: 12px 24px;
+            }
+
+            .text-box {
+                width: 90%;
+                font-size: 1.1em;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
         }
 
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+
+            .btn {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+
+            .text-box {
+                width: 95%;
+                font-size: 1em;
+            }
+
+            .footer p {
+                font-size: 0.8em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -124,7 +171,6 @@
         </div>
     </div>
 </div>
-
 
 <footer class="footer">
     <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
