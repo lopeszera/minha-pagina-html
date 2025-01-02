@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiz pra você</title>
     <style>
-        /* Estilo geral */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -22,70 +21,50 @@
 
         h1 {
             margin: 0;
-            font-size: 2em; /* Tamanho da fonte para responsividade */
+            font-size: 2em;
         }
 
-        .highlight {
-            background-color: #ffeb3b; /* Amarelo para destaque */
-            color: #333;
-            font-size: 1.5em;
-            font-weight: bold;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            display: inline-block;
-        }
-
-        .container {
-            display: flex;
+        .container, .end-screen {
+            display: none; /* Escondido até clicar no botão iniciar */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 70vh; /* Para centralizar verticalmente */
             text-align: center;
-            flex-direction: column;
+            height: 100vh;
             padding: 10px;
-        }
-
-        .btn {
-            background-color: #FF8000;
-            color: white;
-            font-size: 1.5em;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn:hover {
-            background-color: #FE9A2E;
         }
 
         .text-box {
-            display: none;
-            margin-top: 20px;
             font-size: 1.2em;
-            color: #333;
-            background-color: #fff;
-            border: 2px solid #FF8000;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 100%; /* Ajusta para telas menores */
-            width: 80%;
+            max-width: 36%;
+            width: 70%;
+            height: 71%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
         }
 
-        .text-footer {
-            font-size: 0.9em;
-            text-align: right;
-            margin-top: 20px;
-            color: #333;
-            font-style: italic;
-            padding-top: 10px;
+        .message {
+            font-size: 1.5em;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 90%;
+            position: absolute;
+            bottom: 20px;
         }
 
-        /* Rodapé fixo */
         .footer {
             background-color: #333;
             color: white;
@@ -96,86 +75,109 @@
             width: 100%;
         }
 
-        /* Media queries para telas pequenas */
-        @media (max-width: 768px) {
-            .container {
-                height: auto; /* Remove a altura fixa */
-                padding: 20px;
-            }
-
-            .btn {
-                font-size: 1.2em;
-                padding: 12px 24px;
-            }
-
-            .text-box {
-                width: 90%;
-                font-size: 1.1em;
-            }
-
-            h1 {
-                font-size: 1.5em;
-            }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #FF8000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
         }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.2em;
-            }
+        .btn:hover {
+            background-color: #ff9c33;
+        }
 
-            .btn {
-                font-size: 1em;
-                padding: 10px 20px;
-            }
+        .start-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
 
-            .text-box {
-                width: 95%;
-                font-size: 1em;
-            }
-
-            .footer p {
-                font-size: 0.8em;
-            }
+        .start-container h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Mensagem pra Maria Solange!</h1>
+    <h1>AVISO! Excesso de Beleza a Seguir.</h1>
 </header>
 
-<div class="container">
-    <button class="btn" onclick="showText()">Clique para Ver</button>
-    <div class="text-box" id="textBox">
-        <p>
-            "Sol, você é mais forte do que pode imaginar. <br><br>
-            Já passou por tanto, e cada desafio a ensinou a nunca desistir, mesmo quando a vida tentou derrubá-la.
-            Você pode não perceber, mas sua força é imensa. Não é invencível, é verdade, mas sua capacidade de se
-            reerguer, de aprender com os momentos difíceis e seguir em frente, é algo admirável. <br><br>
-            Você não é perfeita, tem suas falhas e vulnerabilidades, mas são essas imperfeições que te tornam única e real.
-            Já caiu, já chorou, mas sempre se levantou, mais forte e mais sábia. Você aprendeu que ser forte não é
-            esconder suas emoções, mas saber lidar com elas e continuar caminhando. <br><br>
-            Você é uma mulher guerreira, e essa luta é sua, faz parte de quem você é.
-            Sua força vem de dentro, do seu coração, das suas experiências e do amor que aprendeu a ter por si mesma.
-            Você é especial do seu jeito, e não precisa de mais nada além de si mesma para saber o quanto é valiosa. <br><br>
-            Eu admiro sua coragem, sua resiliência e sua beleza, por dentro e por fora."
-        </p>
-        <div class="text-footer">
-            <p>Eu imagino que já sabia de tudo isso, mas fiz questão de deixar claro, a mulher que é. Gosto demais de você trem!</p>
-        </div>
-    </div>
+<div class="start-container" id="startContainer">
+    <h2>Clique no botão abaixo e se prepare, fortes chances de se apaixonar(eu me apaixonei...)</h2>
+    <button class="btn" id="startButton">Clique aqui!</button>
 </div>
 
+<div class="container" id="container">
+    <audio id="audioPlayer" loop>
+        <source src="musicas/bo-grande.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <div class="text-box" id="textBox" style="background-image: url('imagens/selfiesiteteste.png');">
+        <p class="message" id="message">"A beleza, lindeza, carisma e simpatia chegou em você e parou, hospedou e está sempre transbordando, brilhando por onde passa."</p>
+    </div>
+    <button class="btn" id="nextButton">Próxima</button>
+    </div>
+    <div class="end-screen" id="endScreen">
+        <h2>Essa música que você conhece bem haha, é pra lembrar do inicio da felicidade que vem me sustentando já tem um tempo! 💖</h2>
+        <button class="btn" id="restartButton">Voltar ao início</button>
+    </div>
 <footer class="footer">
     <p>&copy;Autor: Seu verdadeiro admirador.</p>
 </footer>
 
 <script>
-    function showText() {
-        var textBox = document.getElementById("textBox");
-        textBox.style.display = "block"; // Exibe o texto ao clicar no botão
-    }
+    const images = [
+        { url: 'imagens/selfiesiteteste.png', text: '"Dizer que você é linda, soa muito comum. Olhando essa paisagem já sai automático esse tipo de elogio."' },
+        { url: 'imagens/selfiesiteteste2.png', text: '"Você é muito mais que isso. Quando eu digo que é linda, não é só por esse rosto perfeito, pois você sabe que é mais linda ainda por dentro."' },
+        { url: 'imagens/selfiesiteteste3.png', text: '"Qualquer elogio, por mais completo que seja, pra você vai ser sempre o minímo que deve receber. Lembre-se disso."' }
+    ];
+
+    let currentIndex = 0;
+
+    const startButton = document.getElementById('startButton');
+    const startContainer = document.getElementById('startContainer');
+    const container = document.getElementById('container');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const textBox = document.getElementById('textBox');
+    const message = document.getElementById('message');
+    const nextButton = document.getElementById('nextButton');
+    const endScreen = document.getElementById('endScreen');
+    const restartButton = document.getElementById('restartButton');
+
+    startButton.addEventListener('click', () => {
+        startContainer.style.display = 'none'; // Esconde a tela inicial
+        container.style.display = 'flex'; // Mostra o container principal
+        audioPlayer.play(); // Inicia a música
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex < images.length) {
+            textBox.style.backgroundImage = `url(${images[currentIndex].url})`;
+            message.textContent = images[currentIndex].text;
+        } else {
+            container.style.display = 'none';
+            endScreen.style.display = 'flex';
+        }
+    });
+
+    restartButton.addEventListener('click', () => {
+        currentIndex = 0;
+        endScreen.style.display = 'none';
+        startContainer.style.display = 'flex';
+    });
+
 </script>
 
 </body>
