@@ -27,7 +27,7 @@
         .container, .end-screen {
             display: none; /* Escondido até clicar no botão iniciar */
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             text-align: center;
             height: 100vh;
@@ -107,11 +107,12 @@
 
         .start-container {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             height: 100vh;
             flex-direction: column;
             text-align: center;
+            padding-top: 20px;
         }
 
         .start-container h2 {
@@ -126,7 +127,7 @@
 
 
 <header>
-    <h1>AVISO! Excesso de Beleza a Seguir.</h1>
+    <h1>AVISO! Excesso de Beleza Abaixo</h1>
 </header>
 
 <div class="start-container" id="startContainer">
@@ -173,6 +174,9 @@
     const restartButton = document.getElementById('restartButton');
 
     startButton.addEventListener('click', () => {
+        currentIndex = 0;
+        textBox.style.backgroundImage = `url(${images[currentIndex].url})`;
+        message.textContent = images[currentIndex].text;
         startContainer.style.display = 'none'; // Esconde a tela inicial
         container.style.display = 'flex'; // Mostra o container principal
         audioPlayer.play(); // Inicia a música
