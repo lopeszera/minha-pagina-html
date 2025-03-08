@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiz pra você</title>
+    <title>Especial Dia das Mulheres</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
+            background-color: #ffe6f2;
         }
 
         header {
-            background-color: #FF8000;
+            background-color: #ff66b2;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -25,7 +25,7 @@
         }
 
         .container, .end-screen {
-            display: none; /* Escondido até clicar no botão iniciar */
+            display: none;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
@@ -37,9 +37,9 @@
         .text-box {
             font-size: 1.2em;
             color: #fff;
-            background-color: #f0f8ff;
+            background-color: #ffe6f2;
             padding: 20px;
-            border-radius: 5px;
+            border-radius: 10px;
             max-width: 90%;
             width: 70%;
             height: 71%;
@@ -58,14 +58,13 @@
             color: #fff;
             text-align: center;
             padding: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 105, 180, 0.8);
             border-radius: 10px;
             width: 90%;
             position: absolute;
             bottom: 20px;
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             .message {
                 font-size: 1.2em;
@@ -81,10 +80,10 @@
         }
 
         .footer {
-            background-color: #333;
+            background-color: #cc6699;
             color: white;
             text-align: center;
-            padding: 0px;
+            padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -93,7 +92,7 @@
         .btn {
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #FF8000;
+            background-color: #ff66b2;
             color: white;
             border: none;
             border-radius: 5px;
@@ -102,7 +101,7 @@
         }
 
         .btn:hover {
-            background-color: #ff9c33;
+            background-color: #ff99cc;
         }
 
         .start-container {
@@ -118,21 +117,19 @@
         .start-container h2 {
             font-size: 1.5em;
             margin-bottom: 20px;
-            color: #333;
+            color: #cc3366;
         }
     </style>
 </head>
 <body>
-<!-- Código do HTML permanece o mesmo -->
-
 
 <header>
-    <h1>AVISO! Excesso de Beleza Abaixo</h1>
+    <h1>Uma Homenagem à Sua Beleza e Força</h1>
 </header>
 
 <div class="start-container" id="startContainer">
-    <h2>Clique no botão abaixo e se prepare, fortes chances de se apaixonar(eu me apaixonei...)</h2>
-    <button class="btn" id="startButton">Clique aqui!</button>
+    <h2>Clique no botão abaixo para uma mensagem especial para você, uma mulher incrível!</h2>
+    <button class="btn" id="startButton">Descubra!</button>
 </div>
 
 <div class="container" id="container">
@@ -141,24 +138,29 @@
         Seu navegador não suporta o elemento de áudio.
     </audio>
 
-    <div class="text-box" id="textBox" style="background-image: url('imagens/selfiesiteteste.png');">
-        <p class="message" id="message">"A beleza, lindeza, carisma e simpatia chegou em você e parou, hospedou e está sempre transbordando, brilhando por onde passa."</p>
+    <div class="text-box" id="textBox" style="background-image: url('imagens/mulher1.png');">
+        <p class="message" id="message">"Sua força, sua luz e seu amor fazem do mundo um lugar melhor. Você é
+            extraordinária!"</p>
     </div>
     <button class="btn" id="nextButton">Próxima</button>
-    </div>
-    <div class="end-screen" id="endScreen">
-        <h2>Essa música que você conhece bem haha, é pra lembrar do inicio da felicidade que vem me sustentando já tem um tempo! 💖</h2>
-        <button class="btn" id="restartButton">Voltar ao início</button>
-    </div>
+</div>
+
+<div class="end-screen" id="endScreen">
+    <h2>Feliz Dia das Mulheres! Você merece ser celebrada todos os dias. 💖</h2>
+    <button class="btn" id="restartButton">Voltar ao início</button>
+</div>
+
 <footer class="footer">
-    <p>&copy;Autor: Seu verdadeiro admirador.</p>
+    <p>&copy; Com carinho, de alguém que admira você profundamente.</p>
 </footer>
 
 <script>
     const images = [
-        { url: 'imagens/selfiesiteteste.png', text: '"A beleza, lindeza, carisma e simpatia chegou em você e parou, hospedou e está sempre transbordando, brilhando por onde passa."' },
-        { url: 'imagens/selfiesiteteste2.png', text: '"Vc é muito mais que isso. Quando digo que é linda, não é só por esse rosto perfeito, pois você sabe que é mais ainda por dentro."' },
-        { url: 'imagens/selfiesiteteste3.png', text: '"Qualquer elogio, por mais completo que seja, pra você vai ser sempre o minímo que deve receber. Lembre-se disso."' }
+        { url: 'imagens/img1.jpeg', text: '"Sua força, sua luz e seu amor é oque mais admiro. Você é extraordinária!"' },
+        { url: 'imagens/img2.jpeg', text: '"Você é inspiração, coragem e delicadeza. Nunca se esqueça do seu valor!"' },
+        { url: 'imagens/img3.jpeg', text: '"Lembre-se, você é merecedora de muita coisa boa, principalmente ser feliz!"' },
+        { url: 'imagens/img4.jpeg', text: '"Sou feliz demais com você, espero estar te deixando assim também!"' },
+        { url: 'imagens/img5.jpeg', text: '"Uma pequena homenagem, você merece muito mais, espero que tenha gostado!💖"' }
     ];
 
     let currentIndex = 0;
@@ -166,7 +168,6 @@
     const startButton = document.getElementById('startButton');
     const startContainer = document.getElementById('startContainer');
     const container = document.getElementById('container');
-    const audioPlayer = document.getElementById('audioPlayer');
     const textBox = document.getElementById('textBox');
     const message = document.getElementById('message');
     const nextButton = document.getElementById('nextButton');
@@ -177,9 +178,9 @@
         currentIndex = 0;
         textBox.style.backgroundImage = `url(${images[currentIndex].url})`;
         message.textContent = images[currentIndex].text;
-        startContainer.style.display = 'none'; // Esconde a tela inicial
-        container.style.display = 'flex'; // Mostra o container principal
-        audioPlayer.play(); // Inicia a música
+        startContainer.style.display = 'none';
+        container.style.display = 'flex';
+        audioPlayer.play();
     });
 
     nextButton.addEventListener('click', () => {
@@ -198,7 +199,6 @@
         endScreen.style.display = 'none';
         startContainer.style.display = 'flex';
     });
-
 </script>
 
 </body>
