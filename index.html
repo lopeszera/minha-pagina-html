@@ -124,7 +124,7 @@
 <body>
 
 <header>
-    <h1>Uma Homenagem à Sua Beleza e Força</h1>
+    <h1>Uma pequena Homenagem pra você!</h1>
 </header>
 
 <div class="start-container" id="startContainer">
@@ -134,7 +134,7 @@
 
 <div class="container" id="container">
     <audio id="audioPlayer" loop>
-        <source src="musicas/bo-grande.mp3" type="audio/mpeg">
+        <source src="musicas/yellow.mp3" type="audio/mpeg">
         Seu navegador não suporta o elemento de áudio.
     </audio>
 
@@ -180,6 +180,7 @@
         message.textContent = images[currentIndex].text;
         startContainer.style.display = 'none';
         container.style.display = 'flex';
+        audioPlayer.currentTime = 35; 
         audioPlayer.play();
     });
 
